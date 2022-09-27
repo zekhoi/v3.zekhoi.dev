@@ -27,7 +27,7 @@ export type SnippetFrontmatter = {
   publishedAt: string;
   description: string;
   thumbnail: string;
-  tags: string;
+  tag: string;
 };
 
 export type PickFrontmatter<T extends ContentType> = T extends "blog"

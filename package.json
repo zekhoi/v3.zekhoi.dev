@@ -29,7 +29,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "prebuild": "yarn typecheck && yarn lint:fix",
     "write:blog": "node ./scripts/write blog",
-    "write:snippet": "node ./scripts/write snippet"
+    "write:snippet": "node ./scripts/write snippets"
   },
   "dependencies": {
     "axios": "^0.27.2",

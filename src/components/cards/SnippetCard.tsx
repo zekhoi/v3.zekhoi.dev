@@ -6,12 +6,12 @@ import { createBGVariants, getRandomColor, variants } from "@/lib/color";
 import TechIcons from "@/components/icons/TechIcons";
 import UnstyledLink from "@/components/links/UnstyledLink";
 
-import { ResourceCardType } from "@/types/card";
+import { SnippetCardType } from "@/types/card";
 import { TechListType } from "@/types/global";
 
 import { coloronlydark, onlygray } from "~root/site.config";
 
-const SnippetCard = ({ post }: ResourceCardType) => {
+const SnippetCard = ({ post }: SnippetCardType) => {
   const { theme } = useTheme();
   const color = getRandomColor(variants);
   const colorScheme = createBGVariants(color, "gradient");
@@ -28,16 +28,16 @@ const SnippetCard = ({ post }: ResourceCardType) => {
     >
       <UnstyledLink
         href="/"
-        className="relative flex h-full flex-col space-y-3 rounded-md bg-white p-4 hover:bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800"
+        className="relative flex flex-col h-full p-4 space-y-3 bg-white rounded-md hover:bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800"
       >
-        <div className="flex h-full flex-col">
+        <div className="flex flex-col h-full">
           <h4 className="text-xl font-bold line-clamp-2 group-hover:line-clamp-none">
             {post.title}
           </h4>
-          <div className="mb-3 mt-1">
-            <TechIcons techs={post.stacks as Array<TechListType>} />
+          <div className="mt-1 mb-3">
+            <TechIcons techs={post.tag.split(",") as Array<TechListType>} />
           </div>
-          <p className="flex-1 font-extralight text-gray-700 line-clamp-2 group-hover:line-clamp-none dark:text-gray-200">
+          <p className="flex-1 text-gray-700 font-extralight line-clamp-2 group-hover:line-clamp-none dark:text-gray-200">
             {post.description}
           </p>
         </div>
