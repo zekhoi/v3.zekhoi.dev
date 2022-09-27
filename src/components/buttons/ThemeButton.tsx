@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 
 import clsxm from "@/lib/clsxm";
@@ -6,7 +7,9 @@ import clsxm from "@/lib/clsxm";
 import { ButtonProps } from "@/types/global";
 
 const ThemeButton = ({ className, ...rest }: ButtonProps) => {
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
   return (
     <button
       className={clsxm(
@@ -14,12 +17,12 @@ const ThemeButton = ({ className, ...rest }: ButtonProps) => {
         className
       )}
       {...rest}
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {theme === "light" ? (
-        <HiOutlineMoon className="h-5 w-5" />
+      {mounted && resolvedTheme === "dark" ? (
+        <HiOutlineSun className="w-5 h-5" />
       ) : (
-        <HiOutlineSun className="h-5 w-5" />
+        <HiOutlineMoon className="w-5 h-5" />
       )}
     </button>
   );
