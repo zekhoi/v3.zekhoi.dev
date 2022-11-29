@@ -17,15 +17,15 @@ const Navbar = () => {
           <NavItem key={`nav${href}${label}`} href={href} label={label} />
         ))}
       </Drawer>
-      <header className="w-screen bg-white py-4 dark:bg-gray-900">
+      <header className="w-full py-4 bg-white dark:bg-gray-900">
         <nav className="container-custom">
-          <div className="flex w-full flex-row items-center justify-between text-sm">
+          <div className="flex flex-row items-center justify-between w-full text-sm">
             <MenuButton
               className="flex md:hidden"
               onClick={() => setIsOpen(!isOpen)}
             />
             <Logo />
-            <ul className="hidden items-center justify-between space-x-2 text-xs md:flex md:space-x-2 md:text-sm xl:space-x-3 xl:text-base">
+            <ul className="items-center justify-between hidden space-x-2 text-xs md:flex md:space-x-2 md:text-sm xl:space-x-3 xl:text-base">
               {navlinks.map(({ href, label }) => (
                 <li key={`li${href}${label}`}>
                   <NavItem href={href} label={label} />
