@@ -16,10 +16,10 @@ const ThemeButton = ({ className, ...rest }: ButtonProps) => {
       {...rest}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? (
-        <HiOutlineSun className="w-5 h-5" />
-      ) : (
+      {theme === "light" ? (
         <HiOutlineMoon className="w-5 h-5" />
+      ) : (
+        <HiOutlineSun className="w-5 h-5" />
       )}
     </button>
   );
