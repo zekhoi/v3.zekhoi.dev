@@ -2,10 +2,12 @@ import clsx from "clsx";
 import * as React from "react";
 import { IoLogoVercel } from "react-icons/io5";
 import {
+  SiExpress,
   SiFirebase,
   SiGit,
   SiGoogleanalytics,
   SiJavascript,
+  SiJsonwebtokens,
   SiMarkdown,
   SiMongodb,
   SiNextdotjs,
@@ -15,6 +17,7 @@ import {
   SiReact,
   SiRedux,
   SiSass,
+  SiSequelize,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -103,5 +106,17 @@ export const techList = {
   notion: {
     icon: SiNotion,
     name: "Notion API",
+  },
+  express: {
+    icon: SiExpress,
+    name: "Express.js",
+  },
+  sequelize: {
+    icon: SiSequelize,
+    name: "Sequelize",
+  },
+  jwt: {
+    icon: SiJsonwebtokens,
+    name: "JWT",
   },
 };

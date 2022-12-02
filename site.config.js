@@ -53,48 +53,25 @@ module.exports = {
   ],
   projects: [
     {
+      title: "Personal Website",
+      image: "",
+      url: "https://github.com/zekhoi/zekhoi.dev",
+      description: "My personal website.",
+      stacks: ["tailwindcss", "nextjs", "vercel"],
+    },
+    {
       title: "Coronavirus - Dashboard",
       image: "",
-      url: "https://corona.zekhoi.my.id/",
+      url: "https://github.com/zekhoi/corona",
       description: "A website that track corona virus every country.",
       stacks: ["tailwindcss", "nextjs", "vercel"],
     },
     {
-      title: "Personal Website - SPA",
+      title: "Binar Challenge - RESTful API",
       image: "",
-      url: "https://zekhoi.my.id/",
-      description:
-        "My Personal website version 2 build with NextJS and Tailwind.",
-      stacks: ["tailwindcss", "nextjs", "vercel"],
-    },
-    {
-      title: "Korobot - Discord Bot",
-      image: "",
-      url: "https://discord.com/api/oauth2/authorize?client_id=935198224761896980&permissions=8&scope=bot",
-      description: "A basic discord bot, it can speak.",
-      stacks: ["nodejs", "javascript"],
-    },
-    {
-      title: "Seminar Schedule - Event Calendar",
-      image: "",
-      url: "https://seminar.zekhoi.my.id/",
-      description: "Seminar Schedule Event Calendar from Matematika FMIPA ULM.",
-      stacks: ["tailwindcss", "nextjs", "vercel"],
-    },
-    {
-      title: "Booku - Technical Test",
-      image: "",
-      url: "https://booku.zekhoi.my.id/",
-      description: "Technical test result.",
-      stacks: ["tailwindcss", "nextjs", "vercel"],
-    },
-    {
-      title: "Alternate Reality - Landing Page",
-      image: "",
-      url: "https://altrea.id/",
-      description:
-        "Virtual Group with a focus on developing young talent in the virtual creative industry.",
-      stacks: ["tailwindcss", "nextjs", "vercel"],
+      url: "https://github.com/synrgy-5-fsw-1-cihuy/synrgy-roni-fsw1-cihuy/tree/challenge-6",
+      description: "A website that track corona virus every country.",
+      stacks: ["express", "sequelize", "jwt"],
     },
   ],
   colors: {
