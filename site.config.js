@@ -34,11 +34,26 @@ module.exports = {
     "I have made some projects but i need to improve it and then I can contribute to other. I want to contribute to as many open source projects as possible.",
     "I also want to write at least once a month on Medium so that I can improve my writing and be understood by others.",
   ],
-  experiences: [],
+  experiences: [
+    {
+      startTime: "May 2023",
+      endTime: "Now",
+      role: "Product Engineer Intern (Backend - Node.js)",
+      company: "Zero One Group",
+      description: "ZOG Summer Internship Program 2023",
+    },
+    {
+      startTime: "March 2023",
+      endTime: "May 2023",
+      role: "Junior Full Stack Developer Intern",
+      company: "Kamar Pelajar",
+      description: "Kamar Pelajar Internship",
+    },
+  ],
   educations: [
     {
       startTime: "August 2022",
-      endTime: "Now",
+      endTime: "February 2023",
       role: "Fullstack Web Development",
       company: "Synrgy Academy",
       description: "Synrgy Academy Scholarship by BCA x Binar Academy Batch 5",
@@ -52,6 +67,27 @@ module.exports = {
     },
   ],
   projects: [
+    {
+      title: "RoR ChatApp",
+      image: "",
+      url: "https://github.com/zekhoi/ror-chatapp",
+      description: "Ruby on Rails Chat App",
+      stacks: ["tailwindcss", "nextjs", "vercel", "ruby", "rubyonrails"],
+    },
+    {
+      title: "Hariminggu - Harisenin Clone",
+      image: "",
+      url: "https://github.com/zekhoi/hariminggu-school",
+      description: "My personal website.",
+      stacks: ["tailwindcss", "nextjs", "vercel", "laravel", "php"],
+    },
+    {
+      title: "KostHub",
+      image: "",
+      url: "https://github.com/SYNRGY-FP-C",
+      description: "My personal website.",
+      stacks: ["tailwindcss", "nextjs", "expressjs", "vercel"],
+    },
     {
       title: "Personal Website",
       image: "",
