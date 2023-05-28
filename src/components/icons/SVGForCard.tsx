@@ -1,37 +1,15 @@
-import { useTheme } from "next-themes";
-
-import { getRandomColor, variants } from "@/lib/color";
-
-import { SVGForCardProps } from "@/types/global";
-
-import { coloronlydark, colors } from "~root/site.config";
-
-const SVGForCard = ({ className }: SVGForCardProps) => {
-  const { theme } = useTheme();
-  const color = getRandomColor(variants);
-  const selected = colors[color]?.[500];
+const SVGForCard = () => {
   return (
-    <svg className={className} width={158} height={119} aria-hidden="true">
+    <svg
+      className="absolute top-0 right-0"
+      width={158}
+      height={119}
+      aria-hidden="true"
+    >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="96.22%" id="a">
-          <stop
-            stopColor={
-              theme === "light" && coloronlydark
-                ? "#9ca3af"
-                : selected ?? "#0099FF"
-            }
-            stopOpacity=".88"
-            offset="0%"
-          />
-          <stop
-            stopColor={
-              theme === "light" && coloronlydark
-                ? "#9ca3af"
-                : selected ?? "#0099FF"
-            }
-            stopOpacity=".24"
-            offset="100%"
-          />
+          <stop stopColor="#9ca3af" stopOpacity=".88" offset="0%" />
+          <stop stopColor="#9ca3af" stopOpacity=".24" offset="100%" />
         </linearGradient>
       </defs>
       <g

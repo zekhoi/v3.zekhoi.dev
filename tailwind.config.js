@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const { colors } = require("./site.config");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -20,7 +19,56 @@ module.exports = {
       fontFamily: {
         sans: ["Nunito", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
-      colors: { ...colors },
+      colors: {
+        primary: {
+          50: "#F0F9FF",
+          100: "#DBF1FF",
+          200: "#B8E2FF",
+          300: "#8AD0FF",
+          400: "#52BAFF",
+          500: "#0099FF",
+          600: "#008AE6",
+          700: "#007ACC",
+          800: "#0065A8",
+          900: "#00497A",
+        },
+        success: {
+          50: "#EEFCF6",
+          100: "#DCF9EE",
+          200: "#B0F2D8",
+          300: "#80EAC0",
+          400: "#3FDF9F",
+          500: "#22CC88",
+          600: "#1FB87A",
+          700: "#1BA26C",
+          800: "#17875A",
+          900: "#106040",
+        },
+        danger: {
+          50: "#FFF5F8",
+          100: "#FFE5EE",
+          200: "#FFCCDD",
+          300: "#FFA8C5",
+          400: "#FF7AA7",
+          500: "#FF0055",
+          600: "#EB004E",
+          700: "#CC0044",
+          800: "#AD003A",
+          900: "#750027",
+        },
+        warning: {
+          50: "#FFF8EB",
+          100: "#FFF3DB",
+          200: "#FFE4AD",
+          300: "#FFD480",
+          400: "#FFC247",
+          500: "#FFAA00",
+          600: "#E69900",
+          700: "#CC8800",
+          800: "#A87000",
+          900: "#7A5200",
+        },
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {

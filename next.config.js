@@ -4,9 +4,7 @@ const nextConfig = {
     dirs: ["src"],
   },
   env: {
-    MEDIUM_API_URL: process.env.MEDIUM_API_URL,
-    RESOURCES_API_URL: process.env.RESOURCES_API_URL,
-    MYDOMAIN: process.env.MYDOMAIN,
+    NEXT_PUBLIC_MEDIUM_API_URL: process.env.NEXT_PUBLIC_MEDIUM_API_URL,
   },
   reactStrictMode: true,
   swcMinify: true,

@@ -11,7 +11,7 @@ import remarkGfm from "remark-gfm";
 
 import { ContentType, PickFrontmatter } from "@/types/content";
 
-const contentPath = join(process.cwd(), "src", "_contents");
+const contentPath = join(process.cwd(), "data", "_contents");
 
 export const getAllFileNames = async (type: ContentType) => {
   return readdirSync(join(contentPath, type));

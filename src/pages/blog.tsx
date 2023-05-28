@@ -1,10 +1,8 @@
-import axios from "axios";
 import type { InferGetStaticPropsType, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
-import useSWR from "swr";
 
-import { mediumToBlogProps, searchContent, sortByDate } from "@/lib/helper";
+import { searchContent } from "@/lib/helper";
 import { getAllFilesMatter } from "@/lib/mdx";
 
 import BlogCard from "@/components/cards/BlogCard";
@@ -16,24 +14,11 @@ import { BlogFrontmatter } from "@/types/content";
 const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
 }) => {
-  const [postList, setPostList] = useState<Array<BlogFrontmatter>>([]);
+  const [postList] = useState<Array<BlogFrontmatter>>(articles || []);
   const [filteredPosts, setFilteredPosts] = useState<Array<BlogFrontmatter>>(
-    []
+    articles || []
   );
-  const [postLength, setPostLength] = useState(0);
-
-  const fetcher = async (url: string) =>
-    await axios
-      .get(url)
-      .then((res) => res.data.items)
-      .then((items) => mediumToBlogProps(items))
-      .then((posts) => sortByDate([...posts, ...articles]))
-      .then((posts) => {
-        setFilteredPosts(posts);
-        setPostList(posts);
-        setPostLength(posts.length);
-      });
-  const { error } = useSWR(process.env.MEDIUM_API_URL, fetcher);
+  const [postLength, setPostLength] = useState(articles.length || 0);
   return (
     <>
       <NextSeo title="Blog" />
@@ -61,7 +46,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               {postLength}
             </span>
           </div>
-          {error || postList.length < 1 ? (
+          {postList.length < 1 ? (
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
               <SkeletonCard />
               <SkeletonCard />

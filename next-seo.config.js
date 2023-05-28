@@ -1,15 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const site = require("./site.config");
+const site = require("./data/site.config");
 
 module.exports = {
   titleTemplate: "%s | " + site.name,
   defaultTitle: site.name,
   description: site.description,
-  canonical: site.domain || "https://zekhoi.dev",
+  canonical: site.domain,
   noindex: false,
   nofollow: false,
   openGraph: {
-    url: process.env.MYDOMAIN,
+    url: site.domain,
     title: site.name,
     description: site.description,
     images: [

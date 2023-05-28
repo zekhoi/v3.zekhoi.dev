@@ -6,7 +6,7 @@ import Logo from "@/components/icons/Logo";
 import Drawer from "@/components/layouts/Drawer";
 import NavItem from "@/components/links/NavItem";
 
-import { navlinks } from "~root/site.config";
+import { navlinks } from "~root/data/site.config";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

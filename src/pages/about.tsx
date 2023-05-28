@@ -1,27 +1,15 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
-import { useTheme } from "next-themes";
-
-import clsxm from "@/lib/clsxm";
-import { createBGVariants, getRandomColor, variants } from "@/lib/color";
 
 import Layout from "@/components/layouts/Layout";
 import Section from "@/components/layouts/Section";
 import Timeline from "@/components/Timeline";
 
-import {
-  about,
-  coloronlydark,
-  educations,
-  onlygray,
-  profile,
-} from "~root/site.config";
+import educations from "~root/data/educations";
+import { about, profile } from "~root/data/site.config";
 
 const About: NextPage = () => {
-  const { theme } = useTheme();
-  const selected = createBGVariants(getRandomColor(variants), "gradient");
-  const color = selected ?? "from-primary-400 to-primary-600";
   return (
     <>
       <NextSeo title="About" />
@@ -37,10 +25,7 @@ const About: NextPage = () => {
               width={500}
               height={500}
               layout="responsive"
-              className={clsxm("rounded-md bg-gradient-to-t", color, {
-                ["from-gray-200 to-gray-300"]:
-                  (theme === "light" && coloronlydark) || onlygray,
-              })}
+              className="rounded-md bg-gradient-to-t from-gray-200 to-gray-300"
               alt="Me"
             />
           </figure>

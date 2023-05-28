@@ -10,7 +10,7 @@ import Layout from "@/components/layouts/Layout";
 import Section from "@/components/layouts/Section";
 import Components from "@/components/mdx/Components";
 
-import { blogthumbnail, name } from "~root/site.config";
+import { blogthumbnail, name } from "~root/data/site.config";
 
 const BlogPost: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   code,

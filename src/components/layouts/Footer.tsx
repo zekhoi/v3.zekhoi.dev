@@ -2,7 +2,7 @@ import NextLink from "next/link";
 
 import UnstyledLink from "@/components/links/UnstyledLink";
 
-import { socials } from "~root/site.config";
+import { socials } from "~root/data/site.config";
 
 const Footer = () => {
   return (

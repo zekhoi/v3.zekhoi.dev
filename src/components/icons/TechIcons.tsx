@@ -8,14 +8,18 @@ import {
   SiGoogleanalytics,
   SiJavascript,
   SiJsonwebtokens,
+  SiLaravel,
   SiMarkdown,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
   SiNotion,
+  SiPhp,
   SiPrettier,
   SiReact,
   SiRedux,
+  SiRuby,
+  SiRubyonrails,
   SiSass,
   SiSequelize,
   SiTailwindcss,
@@ -117,6 +121,22 @@ export const techList = {
   },
   jwt: {
     icon: SiJsonwebtokens,
+    name: "JWT",
+  },
+  ruby: {
+    icon: SiRuby,
+    name: "JWT",
+  },
+  rubyonrails: {
+    icon: SiRubyonrails,
+    name: "JWT",
+  },
+  php: {
+    icon: SiPhp,
+    name: "JWT",
+  },
+  laravel: {
+    icon: SiLaravel,
     name: "JWT",
   },
 };

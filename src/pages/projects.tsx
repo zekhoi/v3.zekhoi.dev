@@ -6,7 +6,7 @@ import SkeletonCard from "@/components/cards/SkeletonCard";
 import Layout from "@/components/layouts/Layout";
 import Section from "@/components/layouts/Section";
 
-import { projects } from "~root/site.config";
+import projects from "~root/data/projects";
 const Projects: NextPage = () => {
   return (
     <>
