@@ -4,7 +4,7 @@
 const { writeFile, existsSync, mkdirSync } = require("fs");
 const { join } = require("path");
 
-const path = join(process.cwd(), "src", "_contents");
+const path = join(process.cwd(), "data", "_contents");
 const today = new Date().toDateString().replace(/\s+/g, "-").toLowerCase();
 const template = `---
 title: "Starter template"
