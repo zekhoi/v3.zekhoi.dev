@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { domain } = require("./site.config");
+const { domain } = require("./data/site.config");
 module.exports = {
   siteUrl: domain,
   generateRobotsTxt: true,
