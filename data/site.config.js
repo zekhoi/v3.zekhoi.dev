@@ -8,7 +8,7 @@ module.exports = {
   role: "Product Engineer",
   description:
     "A software engineer who focus on backend development but also likes user interface. Mathematics student. Indonesian.",
-  resume: "https://resume.io/r/iuDuhDJJn",
+  resume: "https://docs.google.com/document/d/1ZfDHKW1rYWNgZ1r4CyOhj0UM5dzw1SLRx1UJY3Z9IYI/edit?usp=sharing",
   socials: [
     { href: "https://github.com/zekhoi", label: "Github" },
     { href: "https://twitter.com/zekhoi", label: "Twitter" },
